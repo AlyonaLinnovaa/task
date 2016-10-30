@@ -62,7 +62,7 @@
 		foreach ($items as $data) {
 			echo "<div class='model'>  Модель : ".htmlspecialchars($data['model'])."<br>" . "</div>";
 			echo " <div class='year'>  Год: ".htmlspecialchars($data['year'])."<br>" . "</div>";
-			echo "<div class='mileage'>   Пробек: ".htmlspecialchars($data['mileage'])."<br>" . "</div>";
+			echo "<div class='mileage'>   Пробег: ".htmlspecialchars(number_format($data['mileage'], 0, ' ', ' ' ))."<br>" . "</div>";
 			echo "<div class='cost'> Стоимость: ".htmlspecialchars(number_format($data['cost'], 0, ' ', ' ' ))." руб"."<br>" . "</div>";
 			if (isset($data['photos'])){
 				foreach ($data['photos'] as $photo){
