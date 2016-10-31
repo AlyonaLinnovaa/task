@@ -66,12 +66,12 @@
 			echo "<div class='cost'> Стоимость: ".htmlspecialchars(number_format($data['cost'], 0, ' ', ' ' ))." руб"."<br>" . "</div>";
 			if (isset($data['photos'])){
 				foreach ($data['photos'] as $photo){
-					echo "<div class = 'photos'>	<img src = '".$photo."'/></div>";
-				echo '<hr>';
+					echo "<div class = 'photos'>	<img src = '".htmlspecialchars($photo)."'/></div>";
+					echo '<hr>';
 				}
 			}
 		}
-		echo"</div>";
+		echo "</div>";
 	}
 ?>	
 		</body>
